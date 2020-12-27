@@ -1,6 +1,24 @@
 .align-left {text-align:left;}
 .align-right {text-align:right;}
 
-.mt-m {margin-top: 2rem;}
+.mt-m {margin-top: 2rem; @include respond(phone){margin-top: 1rem;}}
 
 .mb-s {margin-top: 1rem;}
+
+
+// MEDIA-QUERIES-UTILITIES
+
+.media-default {
+
+    @include respond(phone) {
+        display: none;
+    }
+}
+
+.media-phone {
+    display: none;
+
+    @include respond(phone) {
+        display: inline;
+    }
+}

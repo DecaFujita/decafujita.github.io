@@ -6,6 +6,13 @@
     letter-spacing: .7rem;
     line-height: 10rem;
     margin-left: -.7rem;
+
+    @include respond(phone) {
+        font-size: 8rem;
+        letter-spacing: 0;
+        margin-left: 3rem;
+        line-height: 7rem;
+    }
 }
 .heading2 {
     font-size: 4.5rem;
@@ -14,6 +21,12 @@
     letter-spacing: .15rem;
     line-height: 5rem;
     margin-left: -.2rem;
+
+    @include respond(phone) {
+        font-size: 3.5rem;
+        letter-spacing: 0;
+        line-height: 3.5rem;
+    }
 }
 
 .heading3 {
@@ -24,6 +37,14 @@
     letter-spacing: .15rem;
     line-height: 4.5rem;
     margin-left: -.2rem;
+    
+    @include respond(phone) {
+        font-weight: 700;
+        font-size: 2.5rem;
+        line-height:3rem;
+        margin-left: 3.5rem;
+        margin-top: .5rem;
+    }
 }
 
 .heading4 {
@@ -33,6 +54,17 @@
     letter-spacing: .15rem;
     line-height: 3rem;
     margin-left: -.2rem;
+
+    @include respond(phone) {
+        font-size: 2rem;
+        line-height: 2.2rem;
+    }
+}
+
+.nav {
+    @include respond(tab-port) {
+        font-size: 1.3rem;
+    }
 }
 
 .navTextColorOn {
@@ -45,12 +77,16 @@
     transition: 1s;
 }
 .footer-address {
-    
     &__city {
         font-size: 1.8rem;
         font-weight: 600;
         letter-spacing: .1rem;
         margin-bottom: 1rem;
+
+        @include respond(phone) {
+            margin-bottom: .3rem;
+            font-weight: 700;
+        }
     }
     
     &__details {
@@ -58,6 +94,12 @@
         font-weight: 400;
         letter-spacing: .1rem;
         line-height: 1.7rem;
+
+        @include respond(phone) {
+            font-size: 1.4rem;
+            font-weight: 600;
+            letter-spacing: 0;
+        }
     }
 }
 

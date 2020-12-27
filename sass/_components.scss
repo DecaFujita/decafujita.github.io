@@ -13,14 +13,16 @@
         width: 5rem;
         height: 5rem;
     }
+
+    @include respond(phone) {
+        display: none;
+    }
 }
 
 .cursor__icon {
     height: 5rem;
     width: 5rem;
 }
-
-
 
 ////////////////////////////////////
 ///////TRIANGLES
@@ -29,6 +31,10 @@
     width: 25vw;
     fill: var(--color-secondary-light);
     opacity: .4;
+
+    @include respond(phone) {
+        width: 60vw;
+    }
 
 }
 
@@ -40,6 +46,10 @@
 
     display: flex;
     align-items: flex-end;
+
+    @include respond(phone) {
+        display: none;
+    }
 }
 
 .triangles_2 {
@@ -50,6 +60,13 @@
     justify-content: flex-end;
     align-items: flex-start;
     margin-top: 30rem;
+
+    @include respond(phone) {
+        grid-column: 1/-1;
+        grid-row: 3/4;
+        transform: translateY(-40rem);
+        z-index: -2;
+    }
 }
 
 .triangles_3 {
@@ -78,6 +95,11 @@
 
 .triangles_coloured {
     height: 40rem;
+
+    @include respond(phone) {
+        transform: translateY(-
+        10rem); 
+    }
 }
 
 ////////////////////////////////////

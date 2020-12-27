@@ -75,12 +75,16 @@ body {
     grid-template-rows: 8rem 70vh 3rem min-content 1rem min-content  ;
     grid-template-columns: minmax(3rem,1fr) repeat(3, minmax(min-content,43rem)) minmax(3rem,1fr);
     gap: $gap;
+
+    @include respond(phone) {
+        grid-template-rows: 8rem minmax(60vh, min-content) 3rem min-content 1rem min-content;
+    }
 }
 
 #footer {
     grid-row: 6/7;
     grid-column: 1/-1;
-    height: 20rem;
+    min-height: 20rem;
     background-color: var(--color-grey-light-2);
     
     display: grid;

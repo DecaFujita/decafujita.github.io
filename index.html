@@ -16,15 +16,19 @@
     <title>Packaging Brands Chile</title>
   </head>
         <body>
+            <!-- ########### NAVBAR ########## -->
             <div class='nav-bar bgOpacityOff'>
                 <img src='img/logo_hor.svg' alt='' class='logo'>
+                <div class="burger"></div>
                 <ul class='navigation'>
-                    <li class='nav'><a href='#' class='nav-link'>Home</a></li>
-                    <li class='nav'><a href='#' class='nav-link'>Nosotros</a></li>
+                    <li class='nav'><a href='/home' class='nav-link'>Home</a></li>
+                    <li class='nav'><a href='/nosotros' class='nav-link'>Nosotros</a></li>
                     <li class='nav'><a href='/portafolio.html' class='nav-link'>Portfolio</a></li>
-                    <li class='nav'><a href='#' class='nav-link'>Contacto</a></li>
+                    <li class='nav'><a href='contacto' class='nav-link'>Contacto</a></li>
                 </ul>
             </div>
+
+            <!-- ########### CAROUSEL ########## -->
             <section class='carouselArea'>
                 <div class='btn-circle'>
                     <p class='btn-circle__text'>
@@ -63,25 +67,31 @@
                     </div>                    
                 </div>
 
-                <div class='opentext' id='opentext'>
+                <div class='opentext media-default'>
                     <h1 class='heading3'>Somos<br>una agencia</h1>
                     <h1 class='heading1'>full<br>branding</h1>
                     <div class='bar'></div>
                 </div>
+                <div class='opentext media-phone'>
+                    <h1 class='heading3'>Somos una agencia</h1>
+                    <h1 class='heading1'>full<br>branding</h1>
+                    <div class='bar'></div>
+                </div>
             </section>
-
+            <!-- ########### GALLERY ########## -->
             <section class='gallery'>
                 <div class='gallery__item--0'>
-                    <h1 class='heading2'>Somos<br>especialistas.</h1>
+                    <h1 class='heading2 media-default'>Somos<br>especialistas.</h1>
+                    <h1 class='heading2 media-phone'>Somos especialistas.</h1>
                     <h1 class='mt-m heading4'>Entregamos planificación, diseño, comunicación y experiencia.</h1>
                 </div>
-                <div class='gallery__item gallery__item--1'></div>
-                <div class='gallery__item gallery__item--2'></div>
-                <div class='gallery__item gallery__item--3'></div>
-                <div class='gallery__item gallery__item--4'></div>
-                <div class='gallery__item gallery__item--5'></div>
-                <div class='gallery__item gallery__item--6'></div>
-                <div class='gallery__item gallery__item--7'></div>
+                <div class='gallery__item gallery__item--1'><a href="/projecto/ballerina/pro.html" class="gallery__link"></a></div>
+                <div class='gallery__item gallery__item--2'><a href="/projecto/colun/cafe.html" class="gallery__link"></a></div>
+                <div class='gallery__item gallery__item--3'><a href="/projecto/lipigas/plus.html" class="gallery__link"></a></div>
+                <div class='gallery__item gallery__item--4'><a href="/projecto/ideal/estabien.html" class="gallery__link"></a></div>
+                <div class='gallery__item gallery__item--5'><a href="/projecto/yo/yopilates.html" class="gallery__link"></a></div>
+                <div class='gallery__item gallery__item--6'><a href="/projecto/ballerina/rayfilter.html" class="gallery__link"></a></div>
+                <div class='gallery__item gallery__item--7'><a href="/projecto/nestle/hogarenas.html" class="gallery__link"></a></div>
             </section>
 
             <div class="triangles_1">
@@ -96,17 +106,36 @@
             <div class="triangles_4">
                 <img src='img/triangles_coloured.svg' alt='background_pattern' class='triangles_coloured'>
             </div>
+
+            <!-- ########### FOOTER ########## -->
             <footer id='footer'>
                 <div class="footer-navigation">
+                    <div class="social media-phone">
+                        <a href="#" class='social__link'>
+                            <svg class='social__icon'>
+                                <use xlink:href='img/sprite.svg#icon-facebook'></use>
+                            </svg>
+                        </a>
+                        <a href="#" class='social__link'>
+                            <svg class='social__icon'>
+                                <use xlink:href='img/sprite.svg#icon-instagram'></use>
+                            </svg>
+                        </a>
+                        <a href="#" class='social__link'>
+                            <svg class='social__icon'>
+                                <use xlink:href='img/sprite.svg#icon-linkedin2'></use>
+                            </svg>
+                        </a>
+                    </div>
                     <div class="footer-addresses">
                         <div class="footer-address">
                             <h5 class="footer-address__city">
                             Santiago
                             </h5>
                             <p class="footer-address__details">
-                            Av. Pedro de Valdivia, 1215 <br>
+                            Av. Pedro de Valdivia, 1215 <br class="media-default">
                             Of. 512 - Providencia <br>
-                            +56 9 8293 6938 <br><br>
+                            +56 9 8293 6938 <span class="media-phone"> | </span><br class="media-default"><br class="media-default">
                             contacto@packagingbrands.cl
                             </p>
                         </div>
@@ -115,9 +144,9 @@
                             Rio de Janeiro
                             </h5>
                             <p class="footer-address__details">
-                            Rua Guilhermina Guinle 272 <br>
+                            Rua Guilhermina Guinle 272 <br class="media-default">
                             3º andar - Botafogo <br>
-                            +56 2 2954 9416 <br><br>
+                            +56 2 2954 9416 <span class="media-phone"> | </span><br class="media-default"><br class="media-default">
                             contato@packaging.com.br
                             </p>
                         </div>
@@ -126,14 +155,14 @@
                             São Paulo
                             </h5>
                             <p class="footer-address__details">
-                            Av. Dr. Chucri Zaidan, 1550 <br>
+                            Av. Dr. Chucri Zaidan, 1550 <br class="media-default">
                             Sala 802 - Brooklin <br>
-                            +55 11 4063 8699 <br><br>
+                            +55 11 4063 8699 <span class="media-phone"> | </span><br class="media-default"><br class="media-default">
                             contato@packaging.com.br
                             </p>
                         </div>
                     </div>
-                    <div class="social">
+                    <div class="social media-default">
                         <a href="#" class='social__link'>
                             <svg class='social__icon'>
                                 <use xlink:href='img/sprite.svg#icon-facebook'></use>
