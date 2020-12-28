@@ -202,6 +202,7 @@
     align-self: center;
     text-align: left;
     margin-top: -7rem;
+    z-index: 2;
 
     @include respond(phone) {
         grid-row: 3/4;

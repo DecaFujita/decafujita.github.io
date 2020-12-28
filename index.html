@@ -7,7 +7,7 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="css/splide.min.css">
     <link rel="icon" href="http://www.decafujita.github.io/img/favicon-01.svg" />
 <!--     <link rel="shortcut icon" type="image/png" href="img/favicon-01.svg"> -->
 
@@ -47,8 +47,29 @@
                         </svg>
                     </a>
                 </div>
-              
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+                <!-- SLIDE SHOW -->
+
+                <div id="image-slider" class="splide splide-area ">
+                    <!-- License Splide is released under the MIT license. © 2020 Naotoshi Fujita -->
+                    <div class="splide__track">
+                      <ul class="splide__list">
+                        <li class="splide__slide">
+                          <img src="/img/slide_klauben_HI.jpg">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="img/slide_wrapioca_HI.jpg">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="img/slide_yo_HI.jpg">
+                        </li>
+                      </ul>
+                    </div>
+                </div>
+
+
+
+                <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -65,7 +86,9 @@
                         <img class="d-block carousel-img3" src="img/nada2.png" alt="Third slide">
                       </div>
                     </div>                    
-                </div>
+                </div> -->
+
+
 
                 <div class='opentext media-default'>
                     <h1 class='heading3'>Somos<br>una agencia</h1>
@@ -182,11 +205,17 @@
                 </div>
             </footer>
             
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/splide-script.js"></script>
+
+
+    <script src="path-to-the-file/splide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <script src='script.js'></script>
 </body>
 </html>
