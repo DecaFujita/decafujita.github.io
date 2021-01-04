@@ -59,24 +59,6 @@ body {
   grid-template-columns: minmax(3rem, 1fr) repeat(3, minmax(min-content, 43rem)) minmax(3rem, 1fr);
   gap: 1.5vw; }
 
-.cursor {
-  grid-row: 3/4;
-  grid-column: 3/4;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start; }
-  .cursor a {
-    background-color: white;
-    width: 5rem;
-    height: 5rem; }
-  @media only screen and (max-width: 37.5em) {
-    .cursor {
-      display: none; } }
-
-.cursor__icon {
-  height: 5rem;
-  width: 5rem; }
-
 .triangles {
   width: 25vw;
   fill: var(--color-secondary-light);
