@@ -12,7 +12,7 @@ const Testing = props => {
     return (
         <Box sx={testing}>
             <LangMenu isOpen={isOpen} setIsOpen={setIsOpen} isLang={isLang} setIsLang={setIsLang} />
-            {testingTexts.hello}
+            {testingTexts.intro1}
         </Box>
     )
 }

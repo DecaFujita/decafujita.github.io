@@ -8,6 +8,8 @@ import { useTheme } from '@mui/material/styles';
 import { ScrollToTop } from '../../utils';
 import SunnySwt from '../switches/SunnySwt.component';
 import LangMenu from '../menus/LangMenu.component';
+import { LangContext } from '../../contexts/Lang.context';
+import { texts } from '../../texts/texts';
 
 const Navbar = props => {
     const scrollRef = useRef(false);
@@ -15,6 +17,8 @@ const Navbar = props => {
     const navigate = useNavigate();
     const goTo = (path) => { navigate(path) }
     const  { isOpen, setIsOpen, width } = useContext(PageContext);
+    const { isLang } = useContext(LangContext);
+    const text = texts[isLang];
 
     // Open-close sandwich menu
     const handleClick = () => { setIsOpen(!isOpen) }
@@ -50,11 +54,11 @@ const Navbar = props => {
           {/* <SwitchMode handleChange={props.switchMode} /> */}
             { width < 700 // tablet portrait
               ? 
-                <Sandwich handleClick={handleClick} isOpen={isOpen}  />
+                <Sandwich handleClick={handleClick} isOpen={isOpen} text={text}  />
               :
               <Box sx={menu}>
                 <NavLink exact='true' to='/' style={({isActive}) => ({color: isActive && activeColor })} href='/'>Home</NavLink>
-                <NavLink exact='true' to='/portfolio' style={({isActive}) => ({color: isActive && activeColor })}  href='/portfolio.html'>Portfolio</NavLink>
+                <NavLink exact='true' to='/portfolio' style={({isActive}) => ({color: isActive && activeColor })}  href='/portfolio.html'>{text.portfolio}</NavLink>
                 <NavLink exact='true' to='/cv' style={({isActive}) => ({color: isActive && activeColor })}  href='/cv'>Curriculum</NavLink>
               </Box>
             }

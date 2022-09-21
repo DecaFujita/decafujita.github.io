@@ -1,13 +1,18 @@
-import { useEffect } from 'react';
+import { useEffect, useContext } from 'react';
 import { Box, Typography, Link } from '@mui/material';
 import aboutPic from '../img/decafujita.jpg';
 import Footer from '../components/footer/Footer.component';
 import Intro from './home.intro.page';
+import { LangContext } from '../contexts/Lang.context';
+import { texts } from '../texts/texts';
 
 const Home = props => {
     const handleScroll = props => {
         document.getElementById('about').scrollIntoView({behavior: 'smooth'});
     }
+
+    const { isLang } = useContext(LangContext);
+    const text = texts[isLang];
 
     useEffect(() => {
         try { // start from top (scroll)
@@ -22,23 +27,22 @@ const Home = props => {
     }) 
     return (
         <Box sx={container}>
-            <Intro handleClick={handleScroll} />
+            <Intro handleClick={handleScroll} text={text} />
             <Box id='about' sx={about}>
                 <Box sx={content}>
                     <Box sx={contentASide}>
                         <Box sx={contentASideText}>
-                            <Typography variant='h3' sx={textColor}>About me</Typography>
+                            <Typography variant='h3' sx={textColor}>{ text.aboutMe }</Typography>
                             <Box mt={4}>
                                 <Typography variant='body1' sx={textColor}> 
-                                    I'm a Brazilian Creative Front End developer.
-                                    I have a strong design background, and for the past couple of years,
-                                    I've been studying hard to transpose this experience into coding.
-                                    Although programming started as a longing for smoothing the communication
-                                    between the design and the development team, it rapidly became a passion of mine. <br/><br/>
-                                    If you want to know more about me, check out the links below. <strong>See you around!</strong>
+                                    { text.intro1 }
+                                    <br/><br/>
+                                    { text.intro2 }
+                                    <br/>
+                                    <strong>{ text.intro3 }</strong>
                                 </Typography>
                                 <Box sx={contentButtons}>
-                                    <Link href='/portfolio' variant='body1' sx={link}>Portfolio</Link>
+                                    <Link href='/portfolio' variant='body1' sx={link}>{ text.portfolio}</Link>
                                     <Link href='/cv' variant='body1' sx={link}>Curriculum</Link>
                                 </Box>
                             </Box>
@@ -46,7 +50,7 @@ const Home = props => {
                     </Box>
                     <Box sx={contentBSide}>
                         <Box sx={contentBubble}>
-                            <Typography variant='h4'>designer</Typography>
+                            <Typography variant='h4'>{ text.designer }</Typography>
                             <Typography variant='body1' sx={{margin: '.5rem 0 3rem 2.5rem'}}>
                                     UI/UX<br></br>
                                     Branding<br></br>

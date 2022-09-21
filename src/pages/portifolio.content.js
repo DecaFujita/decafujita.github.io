@@ -43,7 +43,7 @@ export const portfolioContentList = [
         id: 'project4',
         client: 'Cencosud',
         project: 'Kläuben',
-        description: "Klaüben is Cencosud's own brand for premium appliance. The project consisted of branding, packaging and point of purchased developments, as well as material for website and social media.",
+        description:"Klaüben is Cencosud's own brand for premium appliances. The project consisted of branding creation, packaging design and point of purchase communication, as well as material for the website and social media.",
         tags: ['branding','packaging','pop','user interface','social media'],
         mainPic: KlaubenMain,
         mainPicNeg: KlaubenMain,

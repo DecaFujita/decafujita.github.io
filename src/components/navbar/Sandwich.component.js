@@ -27,7 +27,7 @@ const Sandwich = props => {
                     <Box sx={[menuBox, {...menuAnim[state]}]}>
                         <Box red={ref} id='menu' sx={[menu]}>
                             <NavLink exact='true' to='/' style={({isActive}) => ({color: isActive && '#ffffff'})} onClick={handleClick} href='/home'>Home</NavLink>
-                            <NavLink exact='true' to='/portfolio'  style={({isActive}) => ({color: isActive && '#ffffff'})} onClick={handleClick} href='/portafolio.html'>Portfolio</NavLink>
+                            <NavLink exact='true' to='/portfolio'  style={({isActive}) => ({color: isActive && '#ffffff'})} onClick={handleClick} href='/portafolio.html'>{props.text.portfolio}</NavLink>
                             <NavLink exact='true' to='/cv'  style={({isActive}) => ({color: isActive && '#ffffff'})} onClick={handleClick} href='/cv'>Curriculum</NavLink>
                         </Box>
                     </Box>  

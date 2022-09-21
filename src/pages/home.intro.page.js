@@ -4,15 +4,16 @@ import { useTheme } from '@mui/material/styles';
 
 const IntroPage = props => {
     const mainColour = useTheme().palette.primary.main;
+    const text = props.text;
     return (
         <Box sx={intro}>
             <Box sx={aSide}>
                 <Box sx={bubble}>
                     <Box sx={bubbleText}>
                         <Typography variant='h2' sx={text1}>
-                            Hello!&nbsp; <br/>
+                            {text.hello}&nbsp; <br/>
                             {/* { width > 500 && <br/>} */}
-                            I'm
+                            {text.im}
                         </Typography>
                         <Typography variant='h1' sx={text2}>
                             deca&nbsp;<br/>
@@ -24,7 +25,7 @@ const IntroPage = props => {
                 <Box sx={tail} />
             </Box>
             <Box sx={bSide}>
-                <Typography variant='h4' sx={text3}>designer <Typography variant='body1' sx={[textColor, {display: 'inline-block'}]}>and</Typography> &lt;coder/&gt;</Typography>
+                <Typography variant='h4' sx={text3}>{text.designer} <Typography variant='h5' sx={[textColor, {display: 'inline-block'}]}>+</Typography> &lt;coder/&gt;</Typography>
                 <Box sx={chevron} onClick={props.handleClick}>
                     <ChevronDown colour={mainColour} />
                 </Box>

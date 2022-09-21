@@ -5,8 +5,6 @@ import {
     SocialIcoLinkedIn, 
     SocialIcoGitHub, 
     SocialIcoInsta,
-    SocialIcoMessenger,
-    SocialIcoWhatsapp,
     EmailIco,
     PinIco,
 } from '../components/icons/Icons';
@@ -81,13 +79,6 @@ const CV = props => {
                                 </Typography>
                                 <SocialIcoInsta fill={theme.palette.secondary.main}/>
                             </Link>
-                            
-                            {/* <Link sx={personalLink} mt={1} mb={5}>
-                                <Typography variant='body1' mr={2}>
-                                    /decafujita
-                                </Typography>
-                                <SocialIcoMessenger fill={theme.palette.secondary.main}/>
-                            </Link> */}
                             <Divider sx={dividerA} />
                             <Box sx={[session, {justifyContent: 'space-between'}]} mt={4} mb={3}>
                                 <Typography variant='body2' sx={[sessionTitle, skillTitle ]}>
@@ -118,10 +109,10 @@ const CV = props => {
                         <Box sx={bContent}>
                             <Typography variant='h3'>Curriculum</Typography>
                             <Typography variant='body1' mt={5} mb={5}>
-                            Front End developer with a strong design background. Demonstrated history of  
-                            working in the creative industry as a UX/ UI, Branding, Packaging and Graphic designer.
+                            Front End developer with a strong design background. Demonstrated history of working
+                            in the creative industry as a UX/ UI, Branding, Packaging and Graphic designer.
                             Capable of seamlessly interpreting and adapting UI design into the front end coding.
-                            Eager to collaborate and learn from senior developers. 
+                            Keen on collaborating and learning from senior developers.
                             </Typography>
                             <Divider sx={dividerB} />
                             {/* WORK EXPERIENCE */}
