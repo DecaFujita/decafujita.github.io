@@ -5,21 +5,23 @@ import {
     SocialIcoLinkedIn, 
     SocialIcoGitHub, 
     SocialIcoInsta,
-    SocialIcoMessenger,
-    SocialIcoWhatsapp,
     EmailIco,
     PinIco,
 } from '../components/icons/Icons';
 import IconsApps from '../components/icons/IconsApps';
 import SkillItem from '../components/skillbar/SkillItem.component';
 import WorkItem from "../components/cv/WorkList.component";
-import { skillList, workList } from '../components/skillbar/SkillList.component';
+import { skillList } from '../components/skillbar/SkillList.component';
 import IconsInterests from '../components/icons/iconsInterests';
 import { ScrollToTop } from "../utils";
-import { Fragment } from 'react';
+import { Fragment, useContext } from 'react';
+import { LangContext } from '../contexts/Lang.context';
+import { texts } from '../texts/texts';
 
 const CVMobile = props => {
     const theme = useTheme();
+    const { isLang } = useContext(LangContext);
+    const text = texts[isLang];
     ScrollToTop();
 
     return (
@@ -29,12 +31,12 @@ const CVMobile = props => {
                     <Box>
                         <Typography variant='h4'>Deca Fujita</Typography>
                         <Typography variant='body1' mt={.5} sx={{fontWeight: '600'}}>
-                            Front End developer
+                            {text.frontEndDeveloper}
                         </Typography>
                         <Box sx={personalInfo} mt={5}>
                             <PinIco mt='.3rem' fill={theme.palette.secondary.main}/>
                             <Typography variant='body1' ml={1.4}>
-                                Rio de Janeiro - Brazil
+                                Rio de Janeiro - {text.brazil}
                             </Typography> 
                         </Box>
                         <Box sx={personalInfo} mt={1}>
@@ -43,12 +45,6 @@ const CVMobile = props => {
                                 decafujita@gmail.com
                             </Typography>
                         </Box>
-                        {/* <Box sx={personalInfo} mt={1}>
-                            <SocialIcoWhatsapp fill={theme.palette.secondary.main}/>
-                            <Typography variant='body1' mr={2}>
-                                +56 99591 7225
-                            </Typography>
-                        </Box> */}
                     </Box>
                     <Box sx={socialLinks}>
                         <Link sx={personalLink} href="https://cl.linkedin.com/in/deca-fujita-71032249" target="_blank">
@@ -63,9 +59,6 @@ const CVMobile = props => {
                         <Link sx={personalLink} href='https://www.instagram.com/decafujita/' target="_blank" mt={1.5}>
                             <SocialIcoInsta fill={theme.palette.secondary.main}/>
                         </Link>
-                        {/* <Link sx={personalLink} mt={1.5} mb={8}>
-                            <SocialIcoMessenger fill={theme.palette.secondary.main}/>
-                        </Link> */}
                     </Box>
                 </Box>
             </Box>
@@ -73,23 +66,19 @@ const CVMobile = props => {
             {/* B SIDE */}
             <Box sx={bSide}>
                 <Box sx={bContent}>
-                    {/* <Typography variant='h3'>Curriculum</Typography> */}
                     <Typography variant='body1' mb={5}>
-                        Front End developer with a strong design background. Demonstrated history of  
-                        working in the creative industry as a UX/ UI, Branding, Packaging and Graphic designer.
-                        Capable of seamlessly interpreting and adapting UI design into the front end coding.
-                        Eager to collaborate and learn from senior developers. 
+                        {text.cvIntro}
                     </Typography>
                     <Divider sx={dividerB} />
                     {/* WORK EXPERIENCE */}
                     <Box sx={session}  mt={4} mb={2}>
                         <Box sx={columnA}>
                             <Typography variant='body2' sx={sessionTitle}>
-                                Work experience
+                                {text.workExperience}
                             </Typography>
                         </Box>
                         <Box sx={columnB} mb={1}>
-                        { workList.map(item => <WorkItem title={item.title} company={item.company} period={item.period} />)}
+                        { text.workList.map(item => <WorkItem key={item.id} title={item.title} company={item.company} period={item.period} />)}
                         </Box>
                     </Box>
                     <Divider sx={dividerB} />
@@ -97,7 +86,7 @@ const CVMobile = props => {
                     <Box sx={session}  mt={4}>
                         <Box sx={columnA}>
                             <Typography variant='body2' sx={sessionTitle}>
-                                Education
+                                {text.education}
                             </Typography>
                         </Box>
                         <Box sx={columnB}>
@@ -124,7 +113,7 @@ const CVMobile = props => {
                     <Box sx={session}  mt={4}>
                         <Box sx={columnA}>
                             <Typography variant='body2' sx={sessionTitle}>
-                                Certification
+                                {text.certification}
                             </Typography>
                         </Box>
                         <Box sx={columnB}>
@@ -150,27 +139,27 @@ const CVMobile = props => {
                     <Box sx={session}  mt={4}>
                         <Box sx={columnA}>
                             <Typography variant='body2' sx={sessionTitle}>
-                                Languages
+                                {text.languages}
                             </Typography>
                         </Box>
                         <Box sx={columnB}>
                             <Typography variant='body1' sx={sessionSubTitle}>
-                            Portuguese
+                                {text.portuguese}
                             </Typography>  
                             <Typography variant='body2' mb={2}>                              
-                            Mother tongue
+                                {text.motherTongue}
                             </Typography>
                             <Typography variant='body1' sx={sessionSubTitle}>
-                            Spanish
+                                {text.spanish}
                             </Typography>
                             <Typography variant='body2' mb={2}>                              
-                            Fluent
+                                {text.fluent}
                             </Typography>
                             <Typography variant='body1' sx={sessionSubTitle}>
-                            English
+                                {text.english}
                             </Typography>
                             <Typography variant='body2'>                              
-                            Fluent
+                                {text.fluent}
                             </Typography>
                         </Box>
                     </Box>
@@ -179,7 +168,7 @@ const CVMobile = props => {
             <Box sx={cSide}>
                 <Box sx={[session, {justifyContent: 'space-between'}]} mt={4} mb={3}>
                     <Typography variant='body2' sx={[sessionTitle, skillTitle ]}>
-                        TECHNICAL SKILLS
+                        {text.technicalSkills}
                     </Typography>
                     <Box sx={{width: '25rem'}}>
                         <IconsApps />
@@ -191,7 +180,7 @@ const CVMobile = props => {
                 {/* INTERESTS */}
                 <Box sx={[session, {justifyContent: 'space-between'}]} mt={5}>
                     <Typography variant='body2' sx={[sessionTitle, skillTitle ]}>
-                        INTERESTS
+                        {text.interests}
                     </Typography>
                     <Box sx={{width: '25rem'}} mb={2}>
                     <IconsInterests />

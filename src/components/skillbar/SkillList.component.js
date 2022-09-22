@@ -75,46 +75,7 @@ const skillList = [
         percentage: '50%'
     },
 ]
-
-const workList = [
-    {
-        id: 'work1',
-        title: 'Creative Design Director',
-        company: 'Packaging Brands (Santiago - Chile)',
-        period: '2017 - present'
-    },
-    {
-        id: 'work2',
-        title: 'Creative Design Manager',
-        company: 'Packaging Brands (Latam)',
-        period: '2015 - 2017'
-    },
-    {
-        id: 'work3',
-        title: 'Creative Design Manager',
-        company: 'Packaging Brands (Rio de Janeiro - Brazil)',
-        period: '2014 - 2015'
-    },
-    {
-        id: 'work4',
-        title: 'Designer',
-        company: 'Evolve Creative (London - UK)',
-        period: '2013 - 2014'
-    },
-    {
-        id: 'work5',
-        title: 'Designer',
-        company: 'Packaging Brands (Rio de Janeiro - Brazil)',
-        period: '2017 - 2009'
-    },
-    {
-        id: 'work6',
-        title: 'Designer',
-        company: 'Spice Design (São Paulo - Brazil)',
-        period: '2003 - 2007'
-    }
-]
-export { skillList, workList };
+export { skillList };
 
 
 // senha: cert1602

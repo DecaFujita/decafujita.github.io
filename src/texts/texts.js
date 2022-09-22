@@ -16,15 +16,13 @@ export const texts = {
         //porfolio
         
         //curriculum
-        fonrtEndDeveloper: "Front End developer",
+        frontEndDeveloper: "Front End developer",
         brazil: "Brazil",
         technialSkills: "TECHNICAL SKILLS",
         interests: "INTERESTS",
         cvIntro: "Front End developer with a strong design background. Demonstrated history of working in the creative industry as a UX/ UI, Branding, Packaging and Graphic designer. Capable of seamlessly interpreting and adapting UI design into the front end coding. Keen on collaborating and learning from senior developers.",
         workExperience: "Work experience",
         education: "Education",
-        goldsmiths1: "Master of Arts (MA), Brands, Communication",
-        goldsmiths2: "and Culture (Promotional Media)",
         ufrj: "Bachelor’s degree, Design",
         certification: "Certification",
         languages: "Languages",
@@ -33,6 +31,44 @@ export const texts = {
         spanish: "Spanish",
         fluent: "Fluent",
         english: "English",   
+        workList: [
+            {
+                id: 'work1',
+                title: 'Creative Design Director',
+                company: 'Packaging Brands (Santiago - Chile)',
+                period: '2017 - present'
+            },
+            {
+                id: 'work2',
+                title: 'Creative Design Manager',
+                company: 'Packaging Brands (Latam)',
+                period: '2015 - 2017'
+            },
+            {
+                id: 'work3',
+                title: 'Creative Design Manager',
+                company: 'Packaging Brands (Rio de Janeiro - Brazil)',
+                period: '2014 - 2015'
+            },
+            {
+                id: 'work4',
+                title: 'Designer',
+                company: 'Evolve Creative (London - UK)',
+                period: '2013 - 2014'
+            },
+            {
+                id: 'work5',
+                title: 'Creative Design Manager',
+                company: 'Packaging Brands (Rio de Janeiro - Brazil)',
+                period: '2017 - 2009'
+            },
+            {
+                id: 'work6',
+                title: 'Designer',
+                company: 'Spice Design (São Paulo - Brazil)',
+                period: '2003 - 2007'
+            }
+        ]
     },
     Português: {
         //basic
@@ -51,15 +87,13 @@ export const texts = {
         //porfolio
         
         //curriculum
-        fonrtEndDeveloper: "Desenvolvedora Front End ",
+        frontEndDeveloper: "Desenvolvedora Front End ",
         brazil: "Brasil",
-        technialSkills: "Habilidades técnicas",
+        technicalSkills: "HABILIDADES TÉCNICAS",
         interests: "INTERESSES",
         cvIntro: "Desenvolvedora Front End com extensa experiência em design. Trabalho profissional na indústria criativa como designer UX/UI, de marcas, embalagem e gráfico.Capaz de interpretar e adaptar com fluidez layouts UI em códigos. Grande interesse em trabalhar em equipe com desenvolvedores seniors.",
         workExperience: "Experiencia laboral",
         education: "Educação",
-        goldsmiths1: "Master of Arts (MA), Brands, Communication",
-        goldsmiths2: "and Culture (Promotional Media)",
         ufrj: "Bacharelado, Design",
         certification: "Certificação",
         languages: "Línguas",
@@ -67,7 +101,45 @@ export const texts = {
         motherTongue: "Língua nativa",
         spanish: "Espanhol",
         fluent: "Fluente",
-        english: "Inglês",   
+        english: "Inglês",
+        workList: [
+            {
+                id: 'work1',
+                title: 'Diretora de criação',
+                company: 'Packaging Brands (Santiago - Chile)',
+                period: '2017 - present'
+            },
+            {
+                id: 'work2',
+                title: 'Gerente de criação',
+                company: 'Packaging Brands (Latam)',
+                period: '2015 - 2017'
+            },
+            {
+                id: 'work3',
+                title: 'Gerente de criação',
+                company: 'Packaging Brands (Rio de Janeiro - Brasil)',
+                period: '2014 - 2015'
+            },
+            {
+                id: 'work4',
+                title: 'Designer',
+                company: 'Evolve Creative (Londres - GB)',
+                period: '2013 - 2014'
+            },
+            {
+                id: 'work5',
+                title: 'Gerente de criação',
+                company: 'Packaging Brands (Rio de Janeiro - Brasil)',
+                period: '2017 - 2009'
+            },
+            {
+                id: 'work6',
+                title: 'Designer',
+                company: 'Spice Design (São Paulo - Brasil)',
+                period: '2003 - 2007'
+            }
+        ]   
     },
     Español: {
         //basic
@@ -86,15 +158,13 @@ export const texts = {
         //porfolio
         
         //curriculum
-        fonrtEndDeveloper: "Desarrolladora Front End ",
+        frontEndDeveloper: "Desarrolladora Front End ",
         brazil: "Brasil",
-        technialSkills: "Habilidades técnicas",
+        technialSkills: "HABILIDADES TÉCNICAS",
         interests: "INTERESES",
         cvIntro: "Desenvolvedora Front End com extensa experiência em design. Trabalho profissional na indústria criativa como designer UX/UI, de marcas, embalagem e gráfico.Capaz de interpretar e adaptar com fluidez layouts UI em códigos. Grande interesse em trabalhar em equipe com desenvolvedores seniors.",
         workExperience: "Experiencia laboral",
         education: "Educação",
-        goldsmiths1: "Master of Arts (MA), Brands, Communication",
-        goldsmiths2: "and Culture (Promotional Media)",
         ufrj: "Bacharelado, Design",
         certification: "Certificação",
         languages: "Línguas",
@@ -102,6 +172,44 @@ export const texts = {
         motherTongue: "Língua nativa",
         spanish: "Espanhol",
         fluent: "Fluente",
-        english: "Inglês",   
+        english: "Inglês",
+        workList: [
+            {
+                id: 'work1',
+                title: 'Directora de diseño',
+                company: 'Packaging Brands (Santiago - Chile)',
+                period: '2017 - present'
+            },
+            {
+                id: 'work2',
+                title: 'Gerente de diseño',
+                company: 'Packaging Brands (Latam)',
+                period: '2015 - 2017'
+            },
+            {
+                id: 'work3',
+                title: 'Gerente de diseño',
+                company: 'Packaging Brands (Rio de Janeiro - Brasil)',
+                period: '2014 - 2015'
+            },
+            {
+                id: 'work4',
+                title: 'Diseñadora',
+                company: 'Evolve Creative (Londres - GB)',
+                period: '2013 - 2014'
+            },
+            {
+                id: 'work5',
+                title: 'Gerente de diseño',
+                company: 'Packaging Brands (Rio de Janeiro - Brasil)',
+                period: '2017 - 2009'
+            },
+            {
+                id: 'work6',
+                title: 'Diseñadora',
+                company: 'Spice Design (São Paulo - Brasil)',
+                period: '2003 - 2007'
+            }
+        ]   
     }
 };

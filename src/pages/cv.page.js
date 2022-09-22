@@ -11,16 +11,20 @@ import {
 import IconsApps from '../components/icons/IconsApps';
 import SkillItem from '../components/skillbar/SkillItem.component';
 import WorkItem from "../components/cv/WorkList.component";
-import { skillList, workList } from '../components/skillbar/SkillList.component';
+import { skillList } from '../components/skillbar/SkillList.component';
 import IconsInterests from '../components/icons/iconsInterests';
 import { ScrollToTop } from "../utils";
 import { PageContext } from '../contexts/Page.context';
 import { Fragment, useContext } from 'react';
 import CVMobile from './cv.mobile.page';
+import { LangContext } from '../contexts/Lang.context';
+import { texts } from '../texts/texts';
 
 const CV = props => {
     const theme = useTheme();
     const { width } = useContext(PageContext);
+    const { isLang } = useContext(LangContext);
+    const text = texts[isLang];
 
     ScrollToTop();
 
@@ -35,20 +39,14 @@ const CV = props => {
                         <Box sx={aContent}>
                             <Typography variant='h4' mb={1}>Deca Fujita</Typography>
                             <Typography variant='body1' sx={{fontWeight: '600'}}>
-                                Front End developer
+                                {text.frontEndDeveloper}
                             </Typography>
                             <Box sx={personalInfo} mt={8}>
                                 <Typography variant='body1' mr={2}>
-                                    Rio de Janeiro - Brazil
+                                    Rio de Janeiro - {text.brazil}
                                 </Typography>
                                 <PinIco mt='-.15rem' fill={theme.palette.secondary.main}/>
                             </Box>
-                            {/* <Box sx={personalInfo} mt={1}>
-                                <Typography variant='body1' mr={2}>
-                                    +55 997523 9704
-                                </Typography>
-                                <SocialIcoWhatsapp fill={theme.palette.secondary.main}/>
-                            </Box> */}
                             <Box sx={personalInfo} mt={1}>
                                 <Typography variant='body1' mr={1.5}>
                                     decafujita@gmail.com
@@ -82,7 +80,7 @@ const CV = props => {
                             <Divider sx={dividerA} />
                             <Box sx={[session, {justifyContent: 'space-between'}]} mt={4} mb={3}>
                                 <Typography variant='body2' sx={[sessionTitle, skillTitle ]}>
-                                    TECHNICAL SKILLS
+                                    {text.technicalSkills}
                                 </Typography>
                                 <Box sx={icons}>
                                     <IconsApps />
@@ -94,7 +92,7 @@ const CV = props => {
                             {/* INTERESTS */}
                             <Box sx={[session, {justifyContent: 'space-between'}]} mt={4}>
                                 <Typography variant='body2' sx={[sessionTitle, skillTitle ]}>
-                                    INTERESTS
+                                    {text.interests}
                                 </Typography>
                                 <Box sx={icons}>
                                 <IconsInterests />
@@ -109,29 +107,27 @@ const CV = props => {
                         <Box sx={bContent}>
                             <Typography variant='h3'>Curriculum</Typography>
                             <Typography variant='body1' mt={5} mb={5}>
-                            Front End developer with a strong design background. Demonstrated history of working
-                            in the creative industry as a UX/ UI, Branding, Packaging and Graphic designer.
-                            Capable of seamlessly interpreting and adapting UI design into the front end coding.
-                            Keen on collaborating and learning from senior developers.
+                                {text.cvIntro}
                             </Typography>
                             <Divider sx={dividerB} />
+
                             {/* WORK EXPERIENCE */}
                             <Box sx={session}  mt={4} mb={2}>
                                 <Box sx={columnA}>
                                     <Typography variant='body2' sx={sessionTitle}>
-                                        Work experience
+                                        {text.workExperience}
                                     </Typography>
                                 </Box>
                                 <Box sx={columnB} mb={1}>
-                                { workList.map(item => <WorkItem key={`workitem-${item.id}`} title={item.title} company={item.company} period={item.period} />)}
+                                    { text.workList.map(item => <WorkItem key={`workitem-${item.id}`} title={item.title} company={item.company} period={item.period} />)}
                                 </Box>
                             </Box>
                             <Divider sx={dividerB} />
-                            {/* EDUCATION    */}
+                            {/* EDUCATION */}
                             <Box sx={session}  mt={4}>
                                 <Box sx={columnA}>
                                     <Typography variant='body2' sx={sessionTitle}>
-                                        Education
+                                        {text.education}
                                     </Typography>
                                 </Box>
                                 <Box sx={columnB}>
@@ -148,7 +144,7 @@ const CV = props => {
                                         Universidade Federal<br/>do Rio de Janeiro
                                     </Typography>
                                     <Typography variant='body2' mb={5}>
-                                        Bachelor’s degree, Design <br/>
+                                        {text.ufrj} <br/>
                                         1999 - 2003
                                     </Typography>
                                 </Box>
@@ -158,7 +154,7 @@ const CV = props => {
                             <Box sx={session}  mt={4}>
                                 <Box sx={columnA}>
                                     <Typography variant='body2' sx={sessionTitle}>
-                                        Certification
+                                        {text.certification}
                                     </Typography>
                                 </Box>
                                 <Box sx={columnB}>
@@ -184,27 +180,27 @@ const CV = props => {
                             <Box sx={session}  mt={4}>
                                 <Box sx={columnA}>
                                     <Typography variant='body2' sx={sessionTitle}>
-                                        Languages
+                                        {text.languages}
                                     </Typography>
                                 </Box>
                                 <Box sx={columnB}>
                                     <Typography variant='body1' sx={sessionSubTitle}>
-                                    Portuguese
+                                        {text.portuguese}
                                     </Typography>  
                                     <Typography variant='body2' mb={2}>                              
-                                    Mother tongue
+                                        {text.motherTongue}
                                     </Typography>
                                     <Typography variant='body1' sx={sessionSubTitle}>
-                                    Spanish
+                                        {text.spanish}
                                     </Typography>
                                     <Typography variant='body2' mb={2}>                              
-                                    Fluent
+                                        {text.fluent}
                                     </Typography>
                                     <Typography variant='body1' sx={sessionSubTitle}>
-                                    English
+                                        {text.english}
                                     </Typography>
                                     <Typography variant='body2' mb={5}>                              
-                                    Fluent
+                                        {text.fluent}
                                     </Typography>
                                 </Box>
                             </Box>

@@ -25,7 +25,7 @@ const IntroPage = props => {
                 <Box sx={tail} />
             </Box>
             <Box sx={bSide}>
-                <Typography variant='h4' sx={text3}>{text.designer} <Typography variant='h5' sx={[textColor, {display: 'inline-block'}]}>+</Typography> &lt;coder/&gt;</Typography>
+                <Typography variant='h4' sx={text3}>{text.designer} <Typography sx={[textColor, {display: 'inline-block', fontSize: '2.5rem'}]}>+</Typography> &lt;coder/&gt;</Typography>
                 <Box sx={chevron} onClick={props.handleClick}>
                     <ChevronDown colour={mainColour} />
                 </Box>
