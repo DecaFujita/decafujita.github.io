@@ -1,7 +1,7 @@
-
 import { useParams } from 'react-router-dom';
 import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
+import { useContext } from 'react';
 import MonitorPage from '../pages/portfolio.monitor.page';
 import KlaubenPage from '../pages/portfolio.klauben.page';
 import CruzadaPage from '../pages/portfolio.cruzada.page';
@@ -11,12 +11,16 @@ import PackagingPage from '../pages/portfolio.packaging.page';
 import { portfolioContentList } from './portifolio.content';
 import GoBackBtn from '../components/buttons/GoBackBtn.component';
 import { ScrollToTop } from '../utils';
+import { LangContext } from '../contexts/Lang.context';
 
 const PortfolioView = props => {
     const { id } = useParams();
     const project = portfolioContentList.find(project => project.id === `project${id}`);
     const tags = project.tags;
     const DarkMode = props.isDarkMode;   
+    const { isLang } = useContext(LangContext);
+    const projDescription = project.description[isLang];
+    
     ScrollToTop();
 
     return (
@@ -30,7 +34,7 @@ const PortfolioView = props => {
                         <Typography variant='h6' sx={client}>{project.client}</Typography>
                         <Typography variant='h4'>{project.project}</Typography>
                         <Typography variant='body1' sx={description}>
-                            {project.description}
+                            {projDescription}
                         </Typography>
                     </Box>
                     <Box sx={[tagList, {color: project.color}]}>
@@ -63,13 +67,8 @@ const back = theme => ({
     maxWidth: '100rem',
     margin: '0 auto',
     marginBottom: '5rem',
-    [theme.breakpoints.down('laptop')]: { 
-        padding: '0 2rem',
-    },
-    [theme.breakpoints.down('mobile')]: { 
-        padding: '2rem 3rem' ,
-        // marginBottom: '1rem',
-    }
+    [theme.breakpoints.down('laptop')]: { padding: '0 2rem' },
+    [theme.breakpoints.down('mobile')]: { padding: '2rem 3rem' }
 })
 
 const client = theme => ({
@@ -78,12 +77,8 @@ const client = theme => ({
 
 const description = theme => ({
     marginTop: '5rem',
-    [theme.breakpoints.down('laptop')]: {
-        marginTop: '2rem'
-    },
-    [theme.breakpoints.down('tablet')]: {
-        marginTop: '2rem',
-    }
+    [theme.breakpoints.down('laptop')]: { marginTop: '2rem' },
+    [theme.breakpoints.down('tablet')]: { marginTop: '2rem' }
 })
 
 const tagList = theme => ({
@@ -92,9 +87,7 @@ const tagList = theme => ({
         flexWrap: 'wrap',
         marginBottom: '2rem'   
     },
-    [theme.breakpoints.down('mobile')]: {
-        marginBottom: '3rem'   
-    }
+    [theme.breakpoints.down('mobile')]: { marginBottom: '3rem' }
 })
 
 const tagsStyle = theme => ({
@@ -109,10 +102,7 @@ const introSideA = theme => ({
     flexDirection: 'column',
     justifyContent: 'space-between',
     color: theme.palette.text.primary,
-    [theme.breakpoints.down('tablet')]: {
-        width: '100%',
-        padding: '0 3rem',
-    }
+    [theme.breakpoints.down('tablet')]: { width: '100%', padding: '0 3rem' }
 })
 
 const introSideB = theme => ({
@@ -121,9 +111,7 @@ const introSideB = theme => ({
     backgroundSize: '100% auto',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
-    [theme.breakpoints.down('tablet')]: {
-        width: '100%',
-    }
+    [theme.breakpoints.down('tablet')]: { width: '100%' }
 })
 
 const intro = theme => ({
@@ -132,12 +120,8 @@ const intro = theme => ({
     margin: '0 auto',
     minHeight: '40rem',
     display: 'flex',
-    [theme.breakpoints.down('laptop')]: { 
-        padding: '0 2rem',
-    },
-    [theme.breakpoints.down('tablet')]: { 
-        display: 'block'
-    }
+    [theme.breakpoints.down('laptop')]: { padding: '0 2rem' },
+    [theme.breakpoints.down('tablet')]: { display: 'block' }
 })
 
 const container = theme => ({
@@ -145,9 +129,7 @@ const container = theme => ({
     minWidth: '40rem',
     minHeight: '100vh',
     paddingTop: '10rem',
-    [theme.breakpoints.down('tablet')]: { 
-        paddingTop: '7rem',
-    }
+    [theme.breakpoints.down('tablet')]: { paddingTop: '7rem' }
 })
 
 const imgs = theme => ({
@@ -156,7 +138,4 @@ const imgs = theme => ({
     flexDirection: 'column',
     justifyContent: 'center',
     padding: '3rem 0 0 0',
-    // [theme.breakpoints.down('laptop')]: { 
-    //     padding: '3rem 2rem',
-    // },
 })

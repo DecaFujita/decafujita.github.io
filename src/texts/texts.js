@@ -68,7 +68,7 @@ export const texts = {
                 company: 'Spice Design (São Paulo - Brazil)',
                 period: '2003 - 2007'
             }
-        ]
+        ]       
     },
     Português: {
         //basic
@@ -150,9 +150,9 @@ export const texts = {
         hello: "Hola!",
         im: "Soy",
         aboutMe: "Sobre mi",
-        intro1: "Soy desarrolladora criativa Front End. Trabajé por mucho tiempo en el mercado de diseño y en los últimos años me dediquei a transpassar esta experiência aos códigos. O que começou pela vontade de melhorar a comunição entre o time de design e o de desenvolvedores, se tornou uma paixão.",
-        intro2: "Quer saber mais sobre mim? Visite os links abaixo.",
-        intro3: "Nos vemos por aí!",
+        intro1: "Soy desarrolladora creativa Front End. Trabajé por mucho tiempo en el mercado del diseño y en los últimos años me he dedicado a traspasar esta experiencia a los códigos.  “Lo que comenzó como el deseo de mejorar la comunicación entre equipos de diseño y de desarrolladores, se volvió una pasión.",
+        intro2: "¿Quieres saber más sobre mí? Visita los links abajo.",
+        intro3: "¡Te veo a la vuelta!",
         designer: "diseñadora",
 
         //porfolio
@@ -162,17 +162,17 @@ export const texts = {
         brazil: "Brasil",
         technialSkills: "HABILIDADES TÉCNICAS",
         interests: "INTERESES",
-        cvIntro: "Desenvolvedora Front End com extensa experiência em design. Trabalho profissional na indústria criativa como designer UX/UI, de marcas, embalagem e gráfico.Capaz de interpretar e adaptar com fluidez layouts UI em códigos. Grande interesse em trabalhar em equipe com desenvolvedores seniors.",
+        cvIntro: "Desarrolladora Front End con amplia experiencia en el diseño. Trabajo profesional en la industria creativa como diseñadora UX/UI, branding, packaging y diseñadora gráfica. Capaz de interpretar y adaptar con fluidez layouts de UI a código. Me interesa mucho trabajar en equipo con desarrolladores senior.",
         workExperience: "Experiencia laboral",
-        education: "Educação",
-        ufrj: "Bacharelado, Design",
-        certification: "Certificação",
-        languages: "Línguas",
-        portuguese: "Português",
-        motherTongue: "Língua nativa",
-        spanish: "Espanhol",
-        fluent: "Fluente",
-        english: "Inglês",
+        education: "Educación",
+        ufrj: "Licenciatura, Diseño",
+        certification: "Certificación",
+        languages: "Lenguas",
+        portuguese: "Portugués",
+        motherTongue: "Lengua nativa",
+        spanish: "Español",
+        fluent: "Fluido",
+        english: "Inglés",
         workList: [
             {
                 id: 'work1',
