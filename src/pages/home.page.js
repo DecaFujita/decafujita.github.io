@@ -1,10 +1,11 @@
 import { useEffect, useContext } from 'react';
-import { Box, Typography, Link } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import aboutPic from '../img/decafujita.jpg';
-import Footer from '../components/footer/Footer.component';
 import Intro from './home.intro.page';
 import { LangContext } from '../contexts/Lang.context';
 import { texts } from '../texts/texts';
+import { useNavigate } from 'react-router-dom';
+
 
 const Home = props => {
     const handleScroll = props => {
@@ -13,7 +14,8 @@ const Home = props => {
 
     const { isLang } = useContext(LangContext);
     const text = texts[isLang];
-
+    const navigate = useNavigate();
+    const goTo = (path) => { navigate(path) }
     useEffect(() => {
         try { // start from top (scroll)
             window.scroll ({
@@ -42,8 +44,8 @@ const Home = props => {
                                     <strong>{ text.intro3 }</strong>
                                 </Typography>
                                 <Box sx={contentButtons}>
-                                    <Link href='/portfolio' variant='body1' sx={link}>{ text.portfolio}</Link>
-                                    <Link href='/cv' variant='body1' sx={link}>Curriculum</Link>
+                                    <Typography onClick={() => goTo('/portfolio')} variant='body1' sx={link}>{ text.portfolio}</Typography>
+                                    <Typography onClick={() => goTo('/cv')} variant='body1' sx={link}>Curriculum</Typography>
                                 </Box>
                             </Box>
                         </Box>
@@ -163,7 +165,7 @@ const contentBubble = theme => ({
     }
 })
 
-const contentButtons = theme => ({marginTop: '3rem'})
+const contentButtons = theme => ({display: 'flex', color: theme.palette.primary.main, marginTop: '3rem'})
 
 const content = theme => ({
     width: '100%',

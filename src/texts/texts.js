@@ -152,7 +152,7 @@ export const texts = {
         aboutMe: "Sobre mi",
         intro1: "Soy desarrolladora creativa Front End. Trabajé por mucho tiempo en el mercado del diseño y en los últimos años me he dedicado a traspasar esta experiencia a los códigos.  “Lo que comenzó como el deseo de mejorar la comunicación entre equipos de diseño y de desarrolladores, se volvió una pasión.",
         intro2: "¿Quieres saber más sobre mí? Visita los links abajo.",
-        intro3: "¡Te veo a la vuelta!",
+        intro3: "¡Nos vemos!",
         designer: "diseñadora",
 
         //porfolio

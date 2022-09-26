@@ -55,7 +55,7 @@ const CV = props => {
                             </Box>
                             <Link sx={personalLink}  href='https://www.linkedin.com/in/deca-fujita-71032249/' target="_blank" mt={1}>
                                 <Typography variant='body1' mr={2}>
-                                    /decafujita
+                                    /deca-fujita-71032249
                                 </Typography>
                                 <SocialIcoLinkedIn fill={theme.palette.secondary.main}/>
                             </Link>
