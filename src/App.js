@@ -45,7 +45,7 @@ const App = () => {
                 <Route exact path='/portfolio' element={<Portfolio/>} />
                 <Route exact path='/cv' element={<CV />} />
                 <Route exact path='/portfolio/:id' element={<PortfolioView isDarkMode={isDarkMode} />} /> 
-                <Route exact path='/testing' element={<Testing />} /> 
+                {/* <Route exact path='/testing' element={<Testing />} />  */}
                 <Route path='*' element={<PageNotFound />} /> 
               </Routes>
               </Box>
