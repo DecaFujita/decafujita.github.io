@@ -12,7 +12,9 @@ import IconsApps from '../components/icons/IconsApps';
 import SkillItem from '../components/skillbar/SkillItem.component';
 import WorkItem from "../components/cv/WorkList.component";
 import { skillList } from '../components/skillbar/SkillList.component';
-import IconsInterests from '../components/icons/iconsInterests';
+import IconsInterestsEng from '../components/icons/IconsInterestsEng';
+import IconsInterestsPor from '../components/icons/IconsInterestsPor';
+import IconsInterestsEsp from '../components/icons/IconsInterestsEsp';
 import { ScrollToTop } from "../utils";
 import { PageContext } from '../contexts/Page.context';
 import { Fragment, useContext } from 'react';
@@ -95,7 +97,10 @@ const CV = props => {
                                     {text.interests}
                                 </Typography>
                                 <Box sx={icons}>
-                                <IconsInterests />
+                                {isLang === 'English' && <IconsInterestsEng />}
+                                {isLang === 'Português' && <IconsInterestsPor />}
+                                {isLang === 'Español' && <IconsInterestsEsp />}
+                                
                                 </Box>
                             </Box>
                         

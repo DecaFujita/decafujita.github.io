@@ -1,5 +1,5 @@
 import { Fragment, useState, useEffect } from 'react';
-import { BrowserRouter, Route, Routes, HashRouter } from 'react-router-dom'; 
+import {  Route, Routes } from 'react-router-dom'; 
 
 import { CssBaseline,  GlobalStyles, createTheme, Box } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
@@ -13,8 +13,7 @@ import Portfolio from './pages/portfolio.page';
 import PortfolioView from './pages/portfolioView.page';
 import CV from './pages/cv.page';
 import getDesignTokens from './contexts/Theme.context';
-// import getLangTokens from './contexts/Language.context';
-import Testing from './pages/testing.page';
+// import Testing from './pages/testing.page';
 import PageNotFound from './pages/pagenotfound.page';
 
 
