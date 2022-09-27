@@ -37,7 +37,6 @@ const App = () => {
         <GlobalStyles styles={globalStyle} />
         <PageProvider>
           <LangProvider>
-            <HashRouter>
               <Navbar switchMode={switchMode} isDarkMode={isDarkMode}/>
               <Box sx={container}>
               <Routes>
@@ -49,7 +48,6 @@ const App = () => {
                 <Route path='*' element={<PageNotFound />} /> 
               </Routes>
               </Box>
-            </HashRouter>
           </LangProvider>
         </PageProvider>
       </ThemeProvider>
