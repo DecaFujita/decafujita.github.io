@@ -1,5 +1,5 @@
 import { Fragment, useState, useEffect } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom'; 
+import { BrowserRouter, Route, Routes, HashRouter } from 'react-router-dom'; 
 
 import { CssBaseline,  GlobalStyles, createTheme, Box } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
@@ -37,7 +37,7 @@ const App = () => {
         <GlobalStyles styles={globalStyle} />
         <PageProvider>
           <LangProvider>
-            <BrowserRouter>
+            <HashRouter>
               <Navbar switchMode={switchMode} isDarkMode={isDarkMode}/>
               <Box sx={container}>
               <Routes>
@@ -49,7 +49,7 @@ const App = () => {
                 <Route path='*' element={<PageNotFound />} /> 
               </Routes>
               </Box>
-            </BrowserRouter>
+            </HashRouter>
           </LangProvider>
         </PageProvider>
       </ThemeProvider>
